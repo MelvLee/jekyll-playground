@@ -1,1 +1,3 @@
 remote_theme: MelvLee/my-first-jekyll-theme
+plugins:
+  - jekyll-remote-theme
