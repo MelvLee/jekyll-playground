@@ -1,4 +1,4 @@
-name: Manual GitHub Pages
+name: Manual-GitHub-Pages
 
 on:
   workflow_dispatch:
