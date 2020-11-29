@@ -13,3 +13,5 @@ jobs:
       with:
         # Github Token
         token: ${{ secrets.GITHUB_TOKEN }}
+        email: "$GITHUB_ACTOR@users.noreply.github.com"
+        name: "$GITHUB_ACTOR"   
