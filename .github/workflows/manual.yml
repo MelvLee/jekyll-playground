@@ -8,11 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Deploy to GitHub Pages
-      if: success()
-      uses: crazy-max/ghaction-github-pages@v2
+    - name: Empty Commit Action
+      uses: tbvjaos510/empty-commit-action@0.0.2
       with:
-        target_branch: gh-pages
-        build_dir: .
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Github Token
+        token: ${{ secrets.GITHUB_TOKEN }}
