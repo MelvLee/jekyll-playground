@@ -16,7 +16,7 @@ jobs:
         uses: lee-dohm/select-matching-issues@v1.2.0
         with:
           format: list
-          query:  'label:v1'
+          query:  'label:v1,user story'
           token: ${{ secrets.USER_TOKEN }}
           path: issues-tmp.md
           
@@ -28,7 +28,7 @@ jobs:
         uses: lee-dohm/select-matching-issues@v1.2.0
         with:
           format: list
-          query:  'label:v2'
+          query:  'label:v2,user story'
           token: ${{ secrets.USER_TOKEN }}
           path: issues-tmp.md
 
