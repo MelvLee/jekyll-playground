@@ -17,5 +17,12 @@ jobs:
           query:  'label:v1'
           token: ${{ secrets.USER_TOKEN }}
           path: issues.md 
+      - name: List v2 issues
+        uses: lee-dohm/select-matching-issues@v1.2.0
+        with:
+          format: list
+          query:  'label:v2'
+          token: ${{ secrets.USER_TOKEN }}
+          path: issues.md 
       - run: 'cat issues.md'
 
