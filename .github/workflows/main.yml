@@ -39,4 +39,13 @@ jobs:
       - run: |
           sed -i 's/)/){:target="_blank" rel="noopener"}/' issues.md
           cat issues.md
+          mv issues.md ./docs/user-stories-prod.md
+          if [ -n "$(git status ./docs/user-stories-prod.md --porcelain)" ]; then
+            git config user.name "$GITHUB_ACTOR"
+            git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+            git add ./docs/user-stories-prod.md
+            git commit -m "commit generated user stories in productie artifacts"
+            git push
+          fi
+          
 
