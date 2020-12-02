@@ -30,7 +30,7 @@ jobs:
           token: ${{ secrets.USER_TOKEN }}
           path: issues-tmp.md
 
-      - run: cat issues-tmp.md >> issues.md'
+      - run: cat issues-tmp.md >> issues.md
 
       - run: cat issues.md
 
