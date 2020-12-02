@@ -28,13 +28,13 @@ jobs:
         uses: lee-dohm/select-matching-issues@v1.2.0
         with:
           format: list
-          query: label:v2 label:\"user story\"
+          query: label:v2
           token: ${{ secrets.USER_TOKEN }}
           path: issues-tmp.md
 
       - run: |
           cat issues-tmp.md >> issues.md
-          echo -e '\n' >> issued.md
+          echo -e '\n' >> issues.md
 
       - run: |
           sed -i 's/)/){:target="_blank" rel="noopener"}/' issues.md
