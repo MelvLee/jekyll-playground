@@ -16,3 +16,6 @@ jobs:
           format: list
           query:  'label:v1'
           token: ${{ secrets.USER_TOKEN }}
+          path: issues.md 
+      - run: 'cat issues.md'
+
