@@ -22,7 +22,7 @@ jobs:
           
       - run: |
           cat issues-tmp.md >> issues.md
-          echo -e '\n' >> issued.md
+          echo -e '\n' >> issues.md
         
       - name: List v2 issues
         uses: lee-dohm/select-matching-issues@v1.2.0
