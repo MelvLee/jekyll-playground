@@ -10,20 +10,27 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - run: echo -e '# User stories\n\n' >> issues.md
+          
       - name: List v1 issues
         uses: lee-dohm/select-matching-issues@v1.2.0
         with:
           format: list
           query:  'label:v1'
           token: ${{ secrets.USER_TOKEN }}
-          path: issues-1.md 
+          path: issues-tmp.md
+          
+      - run: cat issues-tmp.md >> issues.md
+        
       - name: List v2 issues
         uses: lee-dohm/select-matching-issues@v1.2.0
         with:
           format: list
           query:  'label:v2'
           token: ${{ secrets.USER_TOKEN }}
-          path: issues-2.md
-      - run: 'cat issues-1.md issues-2.md > issues.md'
-      - run: 'cat issues.md'
+          path: issues-tmp.md
+
+      - run: cat issues-tmp.md >> issues.md'
+
+      - run: cat issues.md
 
