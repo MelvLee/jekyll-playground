@@ -17,5 +17,5 @@ jobs:
         with:
           format: list
           query:  label:v1 
-          token: ${{ github.user }}
+          token: ${{ secrets.USER_TOKEN }}
           path: issues.md
