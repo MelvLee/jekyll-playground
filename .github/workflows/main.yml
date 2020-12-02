@@ -8,14 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
       - name: List v1 issues
         uses: lee-dohm/select-matching-issues@v1.2.0
         with:
           format: list
           query:  label:v1 
           token: ${{ secrets.USER_TOKEN }}
-          path: issues.md
